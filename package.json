@@ -1,0 +1,16 @@
+{
+  "name": "crm-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "coffee index.coffee"
+  },
+  "author": "",
+  "license": "private",
+  "publish": false,
+  "dependencies": {
+    "coffee-script": "^1.9.2",
+    "express": "^4.12.3"
+  }
+}
