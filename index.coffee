@@ -24,7 +24,7 @@ app.post '/zendesk/refund', (req, res) ->
   res.status(200).send()
 
 app.get '/zendesk/refunds', (req, res) ->
-  output = "<table>"
+  output = "<table border=1 cellpadding=10>"
   output += "<tr><th>Date</th><th>Ticket</th><th>Requester</th><th>Agent</th><th>Amount</th></tr>"
   tickets.forEach (ticket) ->
     output += "<tr>"
