@@ -35,7 +35,7 @@ app.get '/zendesk/refunds', (req, res) ->
     output += "<td>"+ticket.amount+"</td>"
     output += "</tr>"
   output += "</table>"
-  res.status(200).json output
+  res.status(200).send output
 
 
 server = app.listen process.env.PORT or 3000, ->
