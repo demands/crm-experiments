@@ -1,0 +1,64 @@
+<h3>Upcoming</h3>
+
+<div class='history-item upcoming delivery'>
+  <div class='datetime'>Wednesday May 6, 2015</div>
+  <div class='details'>3pm-5pm Delivery to 458 44th St. Oakland CA</div>
+  <div class='actions'><a href='#' class='details'>details</a></div>
+</div>
+
+<hr>
+
+<h3>Past</h3>
+
+<div class='history-item charge'>
+  <div class='datetime'>Tuesday May 5, 2015</div>
+  <div class='details'>$4.99 overdue package charge for Apr 4 order</div>
+  <div class='actions'><a href="#" class='refund-modal-link' data-toggle='modal' data-target='.refund-modal'>refund</a></div>
+</div>
+
+<div class='history-item charge'>
+  <div class='datetime'>Monday May 4, 2015</div>
+  <div class='details'>$47.19 charged for May 6 delivery</div>
+  <div class='actions'><a href="#" class='details'>details</a></div>
+</div>
+
+<div class='history-item delivery'>
+  <div class='datetime'>Wednesday Apr 29, 2015</div>
+  <div class='details'>3pm-5pm Delivery to 458 44th St. Oakland CA</div>
+  <div class='actions'><a href="#" class='details'>details</a></div>
+</div>
+
+<div class='history-item charge'>
+  <div class='datetime'>Monday Apr 27, 2015</div>
+  <div class='details'>$47.19 charged for Apr 29 delivery</div>
+  <div class='actions'><a href="#" class='details'>details</a></div>
+</div>
+
+<div class='history-item checkout'>
+  <div class='datetime'>Monday Apr 27, 2015</div>
+  <div class='details'>Checkout for Apr 29 delivery</div>
+  <div class='actions'><a href="#" class='details'>details</a></div>
+</div>
+
+<div class='history-item delivery'>
+  <div class='datetime'>Wednesday Apr 8, 2015</div>
+  <div class='details'>3pm-5pm Delivery to 458 44th St. Oakland CA</div>
+  <div class='actions'><a href="#" class='details'>details</a></div>
+</div>
+
+<!-- modal -->
+<div class="modal hide fade refund-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 class="my_modal_label">Confirm $4.99 refund to {{ticket.requester.name}}</h3>
+  </div>
+  <div class="modal-body">
+    <div><b>Card:</b> American Express credit card for {{ticket.requester.name}} ending in 4240</div>
+    <div><b>Charge:</b> $4.99 captured on Tuesday May 5, 2015 at 12:01 am.</div>
+    <div><b>Description:</b> Overdue package charge for Apr 4 order</div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary refund" data-dismiss="modal" aria-hidden="true">Refund</button>
+  </div>
+</div>

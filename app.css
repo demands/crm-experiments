@@ -1,0 +1,32 @@
+h3 {
+  padding-bottom: 10px;
+}
+
+.history-item {
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.history-item.checkout {
+  background: app-asset-url("checkout.png") no-repeat left top;
+}
+.history-item.delivery {
+  background: app-asset-url("delivery.png") no-repeat left 3px;
+}
+.history-item.charge {
+  background: app-asset-url("charge.png") no-repeat left top;
+}
+
+.history-item .datetime {
+  font-weight: bold;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+form textarea, form select {
+  width: 310px;
+}

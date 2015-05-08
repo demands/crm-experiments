@@ -1,0 +1,11 @@
+{{#if ticket}}
+<h2>{{ticket.requester.name}}</h2>
+{{else}}
+<h2>{{user.name}}</h2>
+{{/if}}
+<div>48 orders / 9 shorts / 3 tickets</div>
+<div>$23.02 in marketplace credit</div>
+
+<hr>
+
+<section data-main/>

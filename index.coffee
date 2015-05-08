@@ -1,5 +1,9 @@
 express = require 'express'
+bodyParser = require 'body-parser'
+
 app = express()
+app.use(bodyParser.urlencoded(extended: false))
+app.use(bodyParser.json())
 
 app.get '/desk', (req, res) ->
   res.status(200).send """
@@ -13,18 +17,9 @@ app.get '/desk', (req, res) ->
     </html>
   """
 
-app.get '/zendesk', (req, res) ->
-  res.status(200).send """
-    <html>
-      <head>
-        <title>zendesk experiments</title>
-      </head>
-      <body>
-        <h1>hola zendesk</h1>
-      </body>
-    </html>
-  """
-
+app.post '/zendesk/refund', (req, res) ->
+  console.log req.body
+  res.status(200).send()
 
 server = app.listen process.env.PORT or 3000, ->
   {address, port} = server.address()
