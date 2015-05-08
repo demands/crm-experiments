@@ -1,6 +1,8 @@
 express = require 'express'
 bodyParser = require 'body-parser'
 
+tickets = []
+
 app = express()
 app.use(bodyParser.urlencoded(extended: false))
 app.use(bodyParser.json())
@@ -18,8 +20,12 @@ app.get '/desk', (req, res) ->
   """
 
 app.post '/zendesk/refund', (req, res) ->
-  console.log req.body
+  tickets.push req.body
   res.status(200).send()
+
+app.get '/zendesk/refunds', (req, res) ->
+  res.status(200).json tickets
+
 
 server = app.listen process.env.PORT or 3000, ->
   {address, port} = server.address()
