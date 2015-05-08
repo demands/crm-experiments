@@ -24,7 +24,18 @@ app.post '/zendesk/refund', (req, res) ->
   res.status(200).send()
 
 app.get '/zendesk/refunds', (req, res) ->
-  res.status(200).json tickets
+  output = "<table>"
+  output += "<tr><th>Date</th><th>Ticket</th><th>Requester</th><th>Agent</th><th>Amount</th></tr>"
+  tickets.forEach (ticket) ->
+    output += "<tr>"
+    output += "<td>"+ticket.date+"</td>"
+    output += "<td>"+ticket.ticket+"</td>"
+    output += "<td>"+ticket.requester+"</td>"
+    output += "<td>"+ticket.agent+"</td>"
+    output += "<td>"+ticket.amount+"</td>"
+    output += "</tr>"
+  output += "</table>"
+  res.status(200).json output
 
 
 server = app.listen process.env.PORT or 3000, ->
