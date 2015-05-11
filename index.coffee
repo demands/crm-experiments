@@ -37,6 +37,9 @@ app.get '/zendesk/refunds', (req, res) ->
   output += "</table>"
   res.status(200).send output
 
+app.get '/zendesk/clear', (req, res) ->
+  tickets = []
+  res.redirect('/zendesk/refunds')
 
 server = app.listen process.env.PORT or 3000, ->
   {address, port} = server.address()
