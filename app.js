@@ -26,7 +26,7 @@
           type: 'POST',
           contentType: 'application/json',
           data: JSON.stringify(payload)
-        }
+        };
       }
     },
 
@@ -42,7 +42,7 @@
 
     refund: function(event) {
       event.preventDefault();
-      this.ajax('refund', this.ticket())
+      this.ajax('refund', this.ticket());
     },
 
     refundDone: function(event) {
@@ -50,9 +50,9 @@
 
       var cannedResponse = this.comment().text();
       if(cannedResponse.trim() !== '') {
-        cannedResponse += '\n\n'
+        cannedResponse += '\n\n';
       }
-      cannedResponse += 'We\'ve put $4.99 back on your credit card charge from May 5. Expect an email receipt from us soon.'
+      cannedResponse += 'We\'ve put $4.99 back on your credit card charge from May 5. Expect an email receipt from us soon.';
       this.comment().text(cannedResponse);
     },
 
